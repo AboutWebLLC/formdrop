@@ -1,0 +1,42 @@
+<div class="modal">
+  <div class="modal-header">
+  <a class="close" href="#">×</a>
+  <h3>New {{element.name}}</h3>
+  </div>
+  <div class="modal-body">
+   <a href="" class="icon" data-toggle="collapse" data-target="#available"><i class="icon-info-sign"></i></i>Available Attributes</a>
+   <div id="available"  class="collapse in">   
+   	 <span ng:repeat="attribute in element.attributes">
+        <ng:switch on="attribute.typical" >
+          <strong ng:switch-when="true">{{attribute.name}}</strong>
+          <span ng:switch-default>{{attribute.name}}</span>
+        </ng:switch>
+      </span>
+     </div>
+    <form class="form-horizontal" action="">
+      <div class="control-group">
+          <a class="btn" ng:click="addAttribute(form)"><i class="icon-plus"></i>Attributes</a>
+          <a class="btn" href="{{element.doclink}}" target="_new"><i class="icon-file"></i>{{element.name}} Documenation</a>
+          <!--<a class="btn" ng:click="addTypical(form, element.typical)"><i class="icon-play-circle"></i>Add All Typical Attributes</a>-->
+      </div>
+      <div class="control-group">
+      	<label class="control-label" for="form.label">Name</label>
+        <div class="controls">
+      	<input class="input-xlarge" type="text" name="form.label" />
+        </div>
+      </div>
+      <div class="control-group" ng:repeat="elementAttr in form.attributes">
+          <!-- this will be an ng:switch depending on attribute type -->
+          <select class="input-medium" name="elementAttr.name">
+            <option ng:repeat="option in element.attributes" >{{option.name}}</option>
+          </select>
+          <input class="input-xlarge" type="text" name="elementAttr.value" value="{{elementAttr.value}}"/>
+          <a class="btn btn-danger"  href="" ng:click="form.attributes.$remove(elementAttr)"><i class="icon-trash icon-white"></i></a>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="" ng:click="save()" class="btn btn-primary">Save changes</a>
+    <a href="#" class="btn">Close</a>
+  </div>
+<div>

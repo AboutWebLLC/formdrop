@@ -1,0 +1,41 @@
+{
+    "name": "Checkbox",
+    "id": "checkbox",
+    "attributes": [
+        {"name":"access"},
+        {"name":"after_build"},
+        {"name":"ajax"},
+        {"name":"attributes"},
+        {"name":"default_value", "typical":true},
+        {"name":"description"},
+        {"name":"disabled"},
+        {"name":"element_validate"},
+        {"name":"field_prefix"},
+        {"name":"field_suffix"},
+        {"name":"parents"},
+        {"name":"post_render"},
+        {"name":"prefix"},
+        {"name":"pre_render"},
+        {"name":"process"},
+        {"name":"required"},
+        {"name":"return_value", "typical":true},
+        {"name":"states"},
+        {"name":"suffix"},
+        {"name":"theme"},
+        {"name":"theme_wrappers"},
+        {"name":"title", "typical":true},
+        {"name":"title_display"},
+        {"name":"tree"},
+        {"name":"type", "typical":true},
+        {"name":"weight"}
+    ],
+    "defaults": {
+        "return_value": 1,
+        "title_display": "after",
+        "ajax": {
+            "event": "change"
+        }
+    },
+    "example": "http://api.drupal.org/api/drupal/modules%21contact%21contact.module/7",
+    "doclink": "http://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7#checkbox"
+}

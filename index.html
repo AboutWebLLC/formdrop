@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:ng="http://angularjs.org">
+<html xmlns:ng="http://angularjs.org" ng:app="formDrop">
 <head>
 <meta charset="utf-8">
 <title>Test</title>
@@ -24,20 +24,20 @@
 	<div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">Druforms</a>
+          <a class="brand" href="#">FormDrop</a>
         </div>
       </div>
     </div>
 
 	<div class="container">
-    <ul class="nav nav-pills"  ng:controller="QuickAddCtrl">
+    <ul class="nav nav-pills" >
       <li class="dropdown" id="controls">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#controls">
           Add Control
           <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li ng:repeat="element in elements.$filter({category:'controls'})"><a href="#/add/{{element.name}}">{{element.name}}</a></li>
+          <li ng:repeat="element in elements | filter:{'category':'controls'}"><a href="#/add/{{element.name}}">{{element.name}}</a></li>
         </ul>
           <li class="dropdown" id="special">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#special">
@@ -45,7 +45,7 @@
           <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li ng:repeat="element in elements.$filter({category:'special'})"><a href="#/add/{{element.name}}">{{element.name}}</a></li>
+          <li ng:repeat="element in elements | filter:{'category':'special'}" ng:cloak><a href="#/add/{{element.name}}">{{element.name}}</a></li>
         </ul>
       </li>      
       <li><a href="#about">About</a></li>
@@ -54,21 +54,19 @@
     
     
     <ng:view></ng:view>
-    <!---
-    <h2>Arrange</h2>
-    <div id="tree">
-    {{drupalForm}}
-    </div>
-    --->
     <h2>Output</h2>
-    <pre id="code" class="prettyprint lang-php">{{code}}</pre>    
+    <pre id="code" class="prettyprint linenums" >&lt;?php
+    //Empty form :(
+?&gt;</pre>    
     
   </div>
   <script src="js/libs/underscore-min.js" type="text/javascript"></script>
   <script src="js/libs/jquery-1.7.1.min.js" type="text/javascript"></script>
 	<script src="js/libs/bootstrap.min.js" type="text/javascript"></script>
   <script src="js/libs/prettify.js" type="text/javascript"></script>
-	<script src="http://code.angularjs.org/angular-0.9.19.js" ng:autobind type="text/javascript"></script>
+	<script src="js/libs/angular-0.10.7.js" type="text/javascript"></script>
+  <script src="js/util.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
   <script src="js/controllers.js" type="text/javascript"></script>
   <script src="js/services.js" type="text/javascript"></script>
 </body>

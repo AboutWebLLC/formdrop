@@ -1,0 +1,186 @@
+[
+    {
+        "name": "access",
+        "widget": "Text",
+        "default": false,
+        "type": "Boolean",
+        "description": "Whether the element is accessible or not; when FALSE, the element is not rendered and the user submitted value is not taken into consideration."
+    },
+    {
+        "name": "after_build",
+        "widget": "Array",
+        "default": [],
+        "type": "Array",
+        "description": "An array of function names which will be called after the form or element is built"
+    },
+    {
+        "name": "ajax",
+        "widget": "Array",
+        "default": [],
+        "type": "Array",
+        "description": "An array of elements whose values control the behavior of the element with respect to the Drupal AJAX framework."
+    },
+    {
+        "name": "array_parents",
+        "description": "(read-only, and mostly internal). The array of names of the element's parents (including itself) in the form. This will always match the structure of $form. It is different from #parents in that #parents lists only the structure used in $form_state['values'], which is flat unless #tree is set to TRUE."
+    },
+    {
+        "name": "attached"
+    },
+    {
+        "name": "attributes"
+    },
+    {
+        "name": "autocomplete_path"
+    },
+    {
+        "name": "button_type"
+    },
+    {
+        "name": "collapsed"
+    },
+    {
+        "name": "collapsible"
+    },
+    {
+        "name": "cols"
+    },
+    {
+        "name": "default_tab"
+    },
+    {
+        "name": "default_value"
+    },
+    {
+        "name": "delta"
+    },
+    {
+        "name": "description"
+    },
+    {
+        "name": "disabled"
+    },
+    {
+        "name": "element_validate"
+    },
+    {
+        "name": "empty"
+    },
+    {
+        "name": "empty_option"
+    },
+    {
+        "name": "empty_value"
+    },
+    {
+        "name": "executes_submit_callback"
+    },
+    {
+        "name": "field_prefix"
+    },
+    {
+        "name": "field_suffix"
+    },
+    {
+        "name": "group"
+    },
+    {
+        "name": "header"
+    },
+    {
+        "name": "js_select"
+    },
+    {
+        "name": "limit_validation_errors"
+    },
+    {
+        "name": "markup"
+    },
+    {
+        "name": "maxlength"
+    },
+    {
+        "name": "method"
+    },
+    {
+        "name": "multiple"
+    },
+    {
+        "name": "options"
+    },
+    {
+        "name": "parents"
+    },
+    {
+        "name": "parents"
+    },
+    {
+        "name": "post_render"
+    },
+    {
+        "name": "pre_render"
+    },
+    {
+        "name": "prefix"
+    },
+    {
+        "name": "process"
+    },
+    {
+        "name": "required"
+    },
+    {
+        "name": "resizable"
+    },
+    {
+        "name": "return_value"
+    },
+    {
+        "name": "rows"
+    },
+    {
+        "name": "size"
+    },
+    {
+        "name": "src"
+    },
+    {
+        "name": "states"
+    },
+    {
+        "name": "submit"
+    },
+    {
+        "name": "suffix"
+    },
+    {
+        "name": "theme"
+    },
+    {
+        "name": "theme_wrappers"
+    },
+    {
+        "name": "title"
+    },
+    {
+        "name": "title_display"
+    },
+    {
+        "name": "tree"
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "validate"
+    },
+    {
+        "name": "value"
+    },
+    {
+        "name": "value_callback"
+    },
+    {
+        "name": "weight"
+    }
+]

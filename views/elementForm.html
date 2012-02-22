@@ -6,7 +6,7 @@
   <div class="modal-body">
    <a href="" class="icon" data-toggle="collapse" data-target="#available"><i class="icon-info-sign"></i></i>Available Attributes</a>
    <div id="available"  class="collapse" style="height:0">   
-   	 <span ng:repeat="attribute in element.attributes">
+     <span ng:repeat="attribute in element.attributes">
         <ng:switch on="attribute.typical" >
           <strong ng:switch-when="true">{{attribute.name}}</strong>
           <span ng:switch-default>{{attribute.name}}</span>
@@ -19,9 +19,9 @@
           <a class="btn" href="{{element.doclink}}" target="_new"><i class="icon-file"></i>{{element.name}} Documenation</a>
       </div>
       <div class="control-group">
-      	<label class="control-label">Name</label>
+        <label class="control-label">Name</label>
         <div class="controls">
-      	<input type="text" name="formLabel" ng:model="form.label" required>
+        <input type="text" name="formLabel" ng:model="form.label" required>
         </div>
       </div>      
       <div class="control-group" ng:repeat="elmProp in form.attributes">
@@ -29,7 +29,7 @@
       </select>
       <input type="text" name="elmProp{{$index}}" ng:model="elmProp.value" required/>
        <a class="btn btn-danger"  href="" ng:click="remove($index)"><i class="icon-trash icon-white"></i></a>
- 			</div>
+       </div>
     </form>
   </div>
   <div class="modal-footer">

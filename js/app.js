@@ -5,12 +5,12 @@
 angular.module('formDrop', ['formDrop.services']).
 run(['$route', '$window', '$rootScope',  function($route, $window, $rootScope) {
 
-	// define routes
+    // define routes
     $route.when("/add/:elementId", {template:'views/elementForm.html', controller:ElementFormCtrl});
     $route.when("/about", {template:'views/about.html', controller:AboutCtrl});
     $route.when("/help", {template:'views/help.html', controller:HelpCtrl});
-		$route.otherwise({redirectTo: '/'});
-		var self = this;
-		//$route.parent(this);   	
-		prettyPrint();
+    $route.otherwise({redirectTo: '/'});
+    var self = this;
+    //$route.parent(this);   	
+    prettyPrint();
 }]);

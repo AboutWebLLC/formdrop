@@ -1,24 +1,27 @@
+/**
+ * Main controller, puts the code on the scree
+ */
 function AppCtrl($route, $scope, $browser, FormService, ElementService) { 
   //vars
   var elements = $scope.elements = ElementService.query({elementId:'elements'}),
       code = $scope.code = "";
   
   $scope.$on("render",function(){
+			code = ""
       if(FormService.drupalForm.length){
         code += _.map(FormService.drupalForm, function(value){return toPHP(value,[]);}).join("\n\n");
       }else{
-        code = "<?php \n //Empty form :( \n?>";
+        code = "//Empty form :(";
       }
+			$('#code').html("");
       $('#code').text("<?php\n\n" + code + "\n\n?>");
       prettyPrint();
   });
 }
-function AboutCtrl(){
-}
 
-function HelpCtrl(){
-}
-
+/**
+ * Element Form Controller
+ */
 function ElementFormCtrl(ElementService, FormService, $route, $location, $browser, $scope, $rootScope){ 
     //set this form up
   var form = $scope.form = {attributes: [],
@@ -53,3 +56,11 @@ function ElementFormCtrl(ElementService, FormService, $route, $location, $browse
   }
 }
 ElementFormCtrl.$inject = ['ElementService','FormService','$route','$location','$browser','$scope','$rootScope'];
+
+//not sure if I'll even need these
+function AboutCtrl(){
+}
+
+function HelpCtrl(){
+}
+

@@ -1,0 +1,140 @@
+{
+    "name": "Radio",
+    "id": "radio",
+    "attributes": [
+        {
+            "name": "access",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "after_build",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "ajax",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "attributes",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "default_value",
+            "typical": true,
+            "value": 1
+        },
+        {
+            "name": "description",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "disabled",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "element_validate",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "field_prefix",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "field_suffix",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "parents",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "post_render",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "prefix",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "pre_render",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "process",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "required",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "return_value",
+            "typical": true,
+            "value": 1
+        },
+        {
+            "name": "states",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "suffix",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "theme",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "theme_wrappers",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "title",
+            "typical": true,
+            "value": "Checkbox"
+        },
+        {
+            "name": "title_display",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "tree",
+            "typical": false,
+            "value": ""
+        },
+        {
+            "name": "weight",
+            "typical": false,
+            "value": ""
+        }
+    ],
+    "defaults": {
+        "return_value": 1,
+        "title_display": "after",
+        "ajax": {
+            "event": "change"
+        }
+    },
+    "example": "http://api.drupal.org/api/drupal/modules%21contact%21contact.module/7",
+    "doclink": "http://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7#checkbox"
+}

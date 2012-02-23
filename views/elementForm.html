@@ -4,6 +4,10 @@
   <h3>New {{element.name}}</h3>
   </div>
   <div class="modal-body">
+   <!-- error messages -->
+   <div></div>
+   
+   <!-- available attributes -->
    <a href="" class="icon" data-toggle="collapse" data-target="#available"><i class="icon-info-sign"></i></i>Available Attributes</a>
    <div id="available"  class="collapse" style="height:0">   
      <span ng:repeat="attribute in element.attributes">
@@ -13,6 +17,8 @@
         </ng:switch>
       </span>
      </div>
+     
+     <!-- form -->
     <form class="form-horizontal" action="">
       <div class="control-group">
           <a class="btn" ng:click="addAttribute(form)"><i class="icon-plus"></i>Attributes</a>
@@ -32,6 +38,8 @@
        </div>
     </form>
   </div>
+  
+  <!-- control buttons -->
   <div class="modal-footer">
     <a href="" ng:click="save()" class="btn btn-primary">Save changes</a>
     <a href="#" class="btn">Close</a>

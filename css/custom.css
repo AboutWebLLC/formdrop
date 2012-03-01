@@ -2,3 +2,52 @@
 
 a.icon i{margin:2px 4px 0 0;}
 form{margin:8px 0 10px 0;}
+.formTitle{text-transform:capitalize;}
+
+/* tree */
+.placeholder {
+	background-color: #cfcfcf;
+	height:34px;
+	border-radius: 3px;
+}
+
+.ui-nestedSortable-error {
+	background:#fbe3e4;
+	color:#8a1f11;
+}
+
+ol {
+	margin: 0;
+	padding: 0;
+	padding-left: 30px;
+}
+
+ol.sortable, ol.sortable ol {
+	margin: 0 0 0 25px;
+	padding: 0;
+	list-style-type: none;
+}
+
+ol.sortable {
+	margin: 0;
+}
+
+.sortable li {
+	margin: 0 0 7px 0;
+	padding: 0;
+}
+.sortable li ol li{
+	margin: 7px 0 0 0;
+}
+.sortable li div  {
+	border: 1px solid #cccccc;
+	border-radius:3px;
+	padding: 3px 3px 3px 8px;
+	margin: 0;
+	cursor: move;
+	height:28px;
+	line-height:28px;
+	color: #333;
+}
+
+.sortable li div .btn-group{float:right;padding:0;border:0;margin:0;}

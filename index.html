@@ -2,7 +2,7 @@
 <html xmlns:ng="http://angularjs.org" ng:app="formDrop">
 <head>
 <meta charset="utf-8">
-<title>Test</title>
+<title>FormDrop, Beta</title>
  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,16 +53,28 @@
     </ul>  
     <!-- main view -->
     <ng:view></ng:view>
-    <h2>Output</h2>
-    <pre id="code" class="prettyprint linenums" >&lt;?php
+    <div class="row">
+      <div class="span6">
+        <h2>Output</h2>
+        <pre id="code" class="prettyprint linenums" >&lt;?php
     //Empty form :(
 ?&gt;</pre>    
-    
+      </div>
+      <div class="span6">
+        <h2>Form</h2>
+        <div id="tree">
+        
+        </div>
+        <em>Drag to re-arrange form elements</em>
+      </div>
+    </div>
   </div>
   <script src="js/libs/underscore-min.js" type="text/javascript"></script>
-  <script src="js/libs/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="js/libs/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="js/libs/jquery/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+  <script src="js/libs/jquery/jquery.ui.nestedSortable.js" type="text/javascript"></script>  
   <script src="js/libs/bootstrap.min.js" type="text/javascript"></script>
-  <script src="js/libs/prettify.js" type="text/javascript"></script>
+  <script src="js/libs/prettify/prettify.js" type="text/javascript"></script>
   <script src="js/libs/angular-0.10.7.js" type="text/javascript"></script>
   <script src="js/util.js" type="text/javascript"></script>
   <script src="js/app.js" type="text/javascript"></script>

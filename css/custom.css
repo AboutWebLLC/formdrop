@@ -3,7 +3,16 @@
 a.icon i{margin:2px 4px 0 0;}
 form{margin:8px 0 10px 0;}
 .formTitle{text-transform:capitalize;}
-
+input.ng-invalid{border-color: #953b39;
+  -webkit-box-shadow: 0 0 6px #d59392;
+  -moz-box-shadow: 0 0 6px #d59392;
+  box-shadow: 0 0 6px #d59392;}
+input:focus.ng-invalid {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;}
+	
 /* tree */
 .placeholder {
 	background-color: #cfcfcf;

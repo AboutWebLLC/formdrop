@@ -26,33 +26,43 @@
   <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a> 
           <a class="brand" href="#">FormDrop</a>
+          <div class="nav-collapse">
+          <ul class="nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#help">Help</a></li>
+          </ul>
         </div>
+        </div>
+        
       </div>
     </div>
 
   <div class="container">
-    <ul class="nav nav-pills" >
-      <li class="dropdown" id="controls">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#controls">
-          Add Control
-          <b class="caret"></b>
+    <div class="btn-toolbar">
+      <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="icon-plus"></i> Form Control
+        <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
           <li ng:repeat="element in elements | filter:{'category':'controls'}"><a href="#/add/{{element.name}}">{{element.name}}</a></li>
         </ul>
-          <li class="dropdown" id="special">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#special">
-          Add Special Element
-          <b class="caret"></b>
+      </div>
+      <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="icon-plus"></i> Special Element
+        <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
           <li ng:repeat="element in elements | filter:{'category':'special'}" ng:cloak><a href="#/add/{{element.name}}">{{element.name}}</a></li>
         </ul>
-      </li>      
-      <li><a href="#about">About</a></li>
-      <li><a href="#help">Help</a></li>
-    </ul>  
+      </div>   
+    </div>
     <!-- main view -->
     <ng:view></ng:view>
     <div class="row">

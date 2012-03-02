@@ -9,35 +9,36 @@ angular.module('formDrop.services', [], function($provide) {
       return res('data/7/attributes.json', {}, {});
    }]);
    
-	/**
-	  * if Angular's nextUid() was exposed to the API, we'd use that. But since we probably won't 
-		* have enough form elements for an overrun, I think a simple int counter will do
-		*/
-	var seed = 0;	
+  /**
+    * if Angular's nextUid() was exposed to the API, we'd use that. But since we probably won't 
+    * have enough form elements for an overrun, I think a simple int counter will do
+    */
+  var seed = 0;	
 	
-	//FormService provider
-	var formServiceProvider = function() {
-		this.$get = ['$rootScope',  function ($rootScope) {
-			var drupalForm = [],
-					service = {drupalForm : drupalForm,
-										 save : function(formElement){
-											 var toSave = findFormElementById(formElement.id, drupalForm);
-											 if(toSave){
-												 toSave = formElement;
-											 }else{
-												 drupalForm.push(formElement);
-											 }
-										 },
-										 remove : function(id){
-											 removeFormElementById(id, drupalForm);
-										 },
-										 newForm : function(element){
-											 seed++;
-											 return {id:seed, element: element, label: element.id, attributes: [], children: []};										 
-										 },
-										 getById : function(id){
-											 return findFormElementById(id, drupalForm);
-										 },};
+  //FormService provider
+  var formServiceProvider = function() {
+    this.$get = ['$rootScope',  function ($rootScope) {
+      var drupalForm = [],
+             service = {drupalForm : drupalForm,
+                 	      save : function(formElement){
+                                       var toSave = findFormElementById(formElement.id, drupalForm);
+                                       if(toSave){
+                                         toSave = formElement;
+                                       }else{
+                                         drupalForm.push(formElement);
+                                       }
+                                     },
+                            remove : function(id){
+                                       removeFormElementById(id, drupalForm);
+                            },
+                           newForm : function(element){
+                            	       seed++;
+                            	       return {id:seed, element: element, label: element.id, attributes: [], children: []};										 
+                            	     },
+                           getById : function(id){
+                            	       return findFormElementById(id, drupalForm);
+                                     },
+                       };
 			return service;
 		}];
 	}
@@ -77,7 +78,5 @@ angular.module('formDrop.services', [], function($provide) {
 	
    //provide a service to store/manage the form
    $provide.service('FormService', formServiceProvider);
-	 
-	 
 	
 });

@@ -89,8 +89,16 @@ function ElementFormCtrl(ElementService, FormService, $routeParams, $location, $
   $scope.save = function(){
     FormService.save(form);
     $rootScope.$broadcast("render");
+		$('.modal').modal('hide');
     $location.path("/");
   }
+	
+	$scope.close = function(){		
+		$('.modal').modal('hide');
+    $location.path("/");
+	}
+	
+	$browser.defer(function(){$('.modal').modal({backdrop:'static'});},100);
 }
 ElementFormCtrl.$inject = ['ElementService','FormService','$routeParams','$location','$browser','$scope','$rootScope'];
 
